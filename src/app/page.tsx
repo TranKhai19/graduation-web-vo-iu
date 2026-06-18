@@ -269,7 +269,7 @@ export default function GraduationInvite() {
               {/* Photo Area */}
               <div className="relative w-full h-[85%] rounded-2xl overflow-hidden border border-zinc-100 bg-[#FAFAFA]">
                 <Image 
-                  src="/hero-avatar.jpg?v=2" 
+                  src="/hero-avatar.jpg" 
                   alt="Phan Ngọc Ý Mỹ Graduation" 
                   fill 
                   className="object-cover"
