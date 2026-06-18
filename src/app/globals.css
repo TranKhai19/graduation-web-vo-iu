@@ -1,0 +1,253 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F4F9F5; /* Soft, gentle minty/sage white background */
+  --foreground: #1E3328; /* Deep green-charcoal for text, softer than pure black */
+  --primary: #0F5E3D; /* Dong A University deep green (Primary) */
+  --primary-dark: #093E28; /* Dark forest green for active/deep shadows */
+  --primary-light: #529B78; /* Sage green for hover effects/badges */
+  --accent-orange: #EE6C25; /* Dong A University vibrant orange accent */
+  --accent-orange-light: #FF884D; /* Soft orange for hovers */
+  --accent-orange-bg: #FFF3EC; /* Extremely soft orange/peach tint for backgrounds */
+  --cream: #FAFDFC; /* Warm mint cream */
+  --sage-border: rgba(15, 94, 61, 0.15);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-primary-light: var(--primary-light);
+  --color-accent-orange: var(--accent-orange);
+  --color-accent-orange-light: var(--accent-orange-light);
+  --color-accent-orange-bg: var(--accent-orange-bg);
+  --color-cream: var(--cream);
+  --font-sans: var(--font-outfit), var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, Cambria, serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* 3D claymorphic & neumorphic utility classes */
+.clay-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 28px;
+  box-shadow: 
+    inset 2px 2px 6px rgba(255, 255, 255, 0.95), 
+    inset -4px -4px 10px rgba(15, 94, 61, 0.02), 
+    0 15px 35px rgba(15, 94, 61, 0.04),
+    -4px -4px 15px rgba(255, 255, 255, 0.6);
+  transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.15);
+}
+
+.clay-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 
+    inset 2px 2px 6px rgba(255, 255, 255, 0.95), 
+    inset -4px -4px 10px rgba(15, 94, 61, 0.03), 
+    0 22px 45px rgba(15, 94, 61, 0.08),
+    -4px -4px 20px rgba(255, 255, 255, 0.8);
+}
+
+.clay-card-green {
+  background: linear-gradient(135deg, #0F5E3D 0%, #08492F 100%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 28px;
+  box-shadow: 
+    inset 2px 2px 6px rgba(255, 255, 255, 0.25), 
+    inset -4px -4px 10px rgba(0, 0, 0, 0.3), 
+    0 15px 35px rgba(15, 94, 61, 0.2),
+    -4px -4px 15px rgba(255, 255, 255, 0.05);
+  transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.15);
+}
+
+.clay-card-green:hover {
+  transform: translateY(-6px);
+  box-shadow: 
+    inset 2px 2px 6px rgba(255, 255, 255, 0.3), 
+    inset -4px -4px 10px rgba(0, 0, 0, 0.35), 
+    0 22px 45px rgba(15, 94, 61, 0.28),
+    -4px -4px 20px rgba(255, 255, 255, 0.08);
+}
+
+/* 3D Neumorphic Buttons */
+.btn-3d-green {
+  background-color: var(--primary);
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: 18px;
+  border: 1px solid #147B50;
+  box-shadow: 
+    0 5px 0 #073522,
+    0 10px 15px rgba(15, 94, 61, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.35);
+  transform: translateY(-2px);
+  transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-3d-green:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 7px 0 #073522,
+    0 14px 20px rgba(15, 94, 61, 0.25),
+    inset 0 1px 1px rgba(255, 255, 255, 0.4);
+}
+
+.btn-3d-green:active {
+  transform: translateY(2px);
+  box-shadow: 
+    0 1px 0 #073522,
+    0 3px 6px rgba(15, 94, 61, 0.15),
+    inset 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn-3d-orange {
+  background-color: var(--accent-orange);
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: 18px;
+  border: 1px solid #FC8342;
+  box-shadow: 
+    0 5px 0 #A9430B,
+    0 10px 15px rgba(238, 108, 37, 0.25),
+    inset 0 1px 1px rgba(255, 255, 255, 0.35);
+  transform: translateY(-2px);
+  transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-3d-orange:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 7px 0 #A9430B,
+    0 14px 20px rgba(238, 108, 37, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.4);
+}
+
+.btn-3d-orange:active {
+  transform: translateY(2px);
+  box-shadow: 
+    0 1px 0 #A9430B,
+    0 3px 6px rgba(238, 108, 37, 0.15),
+    inset 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn-3d-cream {
+  background-color: var(--cream);
+  color: var(--primary);
+  font-weight: 600;
+  border-radius: 18px;
+  border: 1px solid rgba(15, 94, 61, 0.15);
+  box-shadow: 
+    0 5px 0 rgba(15, 94, 61, 0.12),
+    0 10px 15px rgba(15, 94, 61, 0.03),
+    inset 0 1px 1px rgba(255, 255, 255, 0.95);
+  transform: translateY(-2px);
+  transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-3d-cream:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 7px 0 rgba(15, 94, 61, 0.12),
+    0 14px 20px rgba(15, 94, 61, 0.05),
+    inset 0 1px 1px rgba(255, 255, 255, 0.98);
+}
+
+.btn-3d-cream:active {
+  transform: translateY(2px);
+  box-shadow: 
+    0 1px 0 rgba(15, 94, 61, 0.12),
+    0 3px 6px rgba(0, 0, 0, 0.03),
+    inset 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* 3D text shadow */
+.text-shadow-3d-green {
+  text-shadow: 
+    0 1px 0 #093E28,
+    0 2px 0 #07311F,
+    0 3px 0 #052417,
+    0 4px 0 #03170E,
+    0 5px 1px rgba(0,0,0,.15),
+    0 0 5px rgba(15,94,61,.2),
+    0 1px 3px rgba(15,94,61,.25),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.15);
+}
+
+.text-shadow-3d-orange {
+  text-shadow: 
+    0 1px 0 #B2450C,
+    0 2px 0 #953709,
+    0 3px 0 #7A2C06,
+    0 4px 1px rgba(0,0,0,.15),
+    0 0 5px rgba(238,108,37,.2),
+    0 1px 3px rgba(238,108,37,.25),
+    0 3px 5px rgba(0,0,0,.2);
+}
+
+/* Custom 3D countdown blocks */
+.countdown-block {
+  background: #FFFFFF;
+  border: 1px solid rgba(15, 94, 61, 0.08);
+  border-radius: 22px;
+  box-shadow: 
+    0 7px 0 rgba(15, 94, 61, 0.08),
+    0 12px 20px rgba(15, 94, 61, 0.03),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.95);
+  transform: rotateX(8deg);
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 
+    inset 2px 2px 6px rgba(255, 255, 255, 0.9),
+    inset -2px -2px 6px rgba(0, 0, 0, 0.01),
+    0 10px 30px rgba(15, 94, 61, 0.03);
+}
+
+/* 3D Flip Card Animation classes */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(15, 94, 61, 0.2);
+  border-radius: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(15, 94, 61, 0.4);
+}
