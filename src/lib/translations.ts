@@ -125,7 +125,7 @@ export const translations = {
 
     // Footer
     footerCopyright:
-      "© 2026 Phan Ngọc Ý Mỹ. Made with ❤️ for Graduation Celebration.",
+      "© 2026 Phan Ngọc Ý Mỹ. Made with ❤️ From Duy Khải aka Chồng iu ❤️ for Graduation Celebration.",
     footerSchool: "Đại học Đông Á - UDA",
 
     // Heart button
@@ -263,7 +263,7 @@ export const translations = {
 
     // Footer
     footerCopyright:
-      "© 2026 Phan Ngoc Y My. Made with ❤️ for Graduation Celebration.",
+      "© 2026 Phan Ngoc Y My. Made with ❤️ From Duy Khải aka Chồng iu ❤️ for Graduation Celebration.",
     footerSchool: "Dong A University - UDA",
 
     // Heart button
